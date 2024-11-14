@@ -1,0 +1,162 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    color: white;
+    text-align: center;
+}
+
+/* Navbar Styles */
+nav {
+    background: linear-gradient(135deg, #1a73e8, #4285f4); /* Vibrant gradient */
+    padding: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    border-radius: 15px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    margin-bottom: 30px;
+    animation: slideInDown 1.2s ease-out; /* Slide-in animation */
+}
+
+/* Moving box background effect in the navbar */
+nav::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.2), transparent);
+    animation: rotateBackground 6s infinite linear; /* Box movement animation */
+    z-index: -1;
+}
+
+/* Rotate background animation */
+@keyframes rotateBackground {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Navbar Links */
+nav a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 18px;
+    padding: 12px 25px;
+    margin: 0 12px;
+    border-radius: 25px;
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease-in-out;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    animation: fadeIn 1.5s ease-out; /* Fade-in animation */
+}
+
+/* Navbar link hover effect */
+nav a:hover {
+    background: linear-gradient(45deg, #ff4b2b, #ff416c);
+    color: #ffffff;
+    transform: scale(1.15);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+    animation: bounce 0.3s ease-in-out;
+}
+
+/* Bounce effect for navbar links */
+@keyframes bounce {
+    0% {
+        transform: scale(1.15) translateY(0);
+    }
+    50% {
+        transform: scale(1.2) translateY(-5px);
+    }
+    100% {
+        transform: scale(1.15) translateY(0);
+    }
+}
+
+/* Marquee Glowing Animation */
+h1 {
+    font-size: 40px;
+    text-transform: uppercase;
+    text-shadow: 4px 4px 6px #FFD700;
+    animation: glowText 1.5s infinite alternate;
+}
+
+/* Glowing effect for the marquee text */
+@keyframes glowText {
+    0% {
+        text-shadow: 0 0 10px #FFD700, 0 0 20px #FFD700;
+    }
+    100% {
+        text-shadow: 0 0 20px #FF4500, 0 0 30px #FF4500;
+    }
+}
+
+/* Logo/Image Styles with Glowing Hover Animation */
+.gallery-image {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    margin: 10px;
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.6); /* Glowing shadow */
+    transition: transform 0.4s, box-shadow 0.4s, rotate 0.4s; /* Smooth transition for hover effects */
+    animation: scaleUp 1.2s ease-out; /* Scale-up animation when page loads */
+}
+
+/* Scale-up animation for images */
+@keyframes scaleUp {
+    from {
+        transform: scale(0.8);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+/* Glowing effect on hover for images */
+.gallery-image:hover {
+    transform: scale(1.1) rotate(10deg);
+    box-shadow: 0px 0px 30px rgba(255, 255, 0, 0.8), 0px 0px 40px rgba(255, 165, 0, 1); /* Stronger glow */
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    nav a {
+        display: block; /* Stack links vertically */
+        font-size: 16px;
+        padding: 10px 20px;
+        margin: 8px 0;
+        width: 100%;
+    }
+
+    div img {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    nav a {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    nav {
+        padding: 8px;
+    }
+
+    div img {
+        width: 60px;
+        height: 60px;
+    }
+}

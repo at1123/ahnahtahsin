@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour Bangladesh</title>
+    <link rel="stylesheet" href="tour.css"> <!-- Link to the external CSS file -->
+</head>
+<body>
+
+    <!-- Header Section -->
+    <div class="box">
+        <h3>Tour Bangladesh</h3>
+        <div>
+            <a href="index2.html"><button>Home</button></a>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <h1 class="fade-in">পঞ্চগড়</h1>
+    <h3 class="fade-in">পঞ্চগড় জেলা</h3>
+    <p class="fade-in">বাংলাদেশের উত্তর-পশ্চিমাঞ্চলের রংপুর বিভাগের একটি প্রশাসনিক অঞ্চল। এটি বাংলাদেশের সবচেয়ে উত্তরের জেলা। এই জেলা থেকেই বহুল আলোচিত হিমালয়ের কাঞ্চনজঙ্ঘা চূড়া দেখতে পাওয়া যায়।</p>
+
+    <h3 class="fade-in">অবস্থান ও আয়তন</h3>
+    <p class="fade-in">পঞ্চগড় জেলার আয়তন প্রায় ১,৪০৪.৬২ বর্গ কি.মি. বা ৫৪২.৩৩ বর্গমাইল। এটি ভারতের পশ্চিমবঙ্গের সীমান্তের কাছাকাছি অবস্থিত, উত্তরে ভারতের পশ্চিমবঙ্গ, দক্ষিণে দিনাজপুর ও ঠাকুরগাঁও, পূর্বে নীলফামারী, পশ্চিমে আবার ভারতের পশ্চিমবঙ্গ।</p>
+
+    <h3 class="fade-in">নামকরণ</h3>
+    <p class="fade-in">কেউ কেউ মনে করে থাকেন যে, প্রাচীনকালে পুণ্ড্রবর্ধন রাজ্যের অর্ন্তগত ‘পঞ্চনগরী’ নামে একটি অঞ্চল ছিল। কালক্রমে পঞ্চনগরী ‘পঞ্চগড়’ নামে আত্মপ্রকাশ করে।</p>
+
+    <h3 class="fade-in">ভারত বিভাগ ও আধুনিক যুগ</h3>
+    <p class="fade-in">১৯১১ সালে পঞ্চগড় জেলা একটি পূর্ণাঙ্গ থানা হিসাবে আত্মপ্রকাশ করে এবং ১৯৮৪ সালে এটি একটি জেলায় উন্নীত হয়। পঞ্চগড়ে রয়েছে বিভিন্ন সাংস্কৃতিক ও ঐতিহাসিক স্থান, যেমন ভিতরগড় দূর্গ এবং বরদেশ্বরী মন্দির।</p>
+
+    <h3 class="fade-in">চা বাগান</h3>
+    <p class="fade-in">পঞ্চগড় জেলার অর্থনৈতিক উন্নয়নে নতুনভাবে যোগ হয়েছে চা চাষ। এখানকার চা বাগানগুলো বিশেষভাবে পরিচিত এবং দেশের চা শিল্পে একটি গুরুত্বপূর্ণ ভূমিকা পালন করছে।</p>
+
+    <h3 class="fade-in">চিত্তাকর্ষক স্থান</h3>
+    <p class="fade-in">জেলায় সরকারি ও বেসরকারি উদ্যোগে গড়ে উঠেছে বেশ কিছু স্থান, যেমন জেলা শিল্পকলা একাডেমি, হিমালয় পার্ক, ডি.সি পার্ক ইত্যাদি।</p>
+
+    <h3 class="fade-in">দর্শনীয় স্থানসমূহ</h3>
+    <ul style="list-style-type: none; padding: 0;" class="fade-in">
+        <li>হিমালয় পার্ক</li>
+        <li>বরদেশ্বরী মন্দির</li>
+        <li>ভেতরগড়</li>
+    </ul>
+
+    <!-- Pagination Section -->
+    <div class="pagination">
+        <button onclick="location.href='tour1.html'">1</button>
+        <button onclick="location.href='tour2.html'">2</button>
+        <button onclick="location.href='tour3.html'">3</button>
+        <button onclick="location.href='tour4.html'">4</button>
+        <button onclick="location.href='tour5.html'">5</button>
+    </div>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-to-top" onclick="scrollToTop()">↑ Top</button>
+
+    <!-- Toggle Button with Icons -->
+    <div class="toggle-container">
+        <div class="toggle" onclick="toggleMode()">
+            <div class="toggle-circle"></div>
+            <span class="toggle-icon" id="toggle-icon">☀️</span> <!-- Default icon is sun -->
+        </div>
+    </div>
+
+    <script>
+        // Toggle Dark/Light Mode
+        function toggleMode() {
+            const body = document.body;
+            body.classList.toggle('dark-mode');
+            const toggleCircle = document.querySelector('.toggle-circle');
+            const toggleIcon = document.getElementById('toggle-icon');
+
+            if (body.classList.contains('dark-mode')) {
+                toggleCircle.classList.add('move-right');
+                toggleIcon.textContent = '🌙'; // Change icon to moon
+            } else {
+                toggleCircle.classList.remove('move-right');
+                toggleIcon.textContent = '☀️'; // Change icon to sun
+            }
+        }
+
+        // Show scroll to top button when scrolled down
+        window.onscroll = function() {
+            const scrollButton = document.querySelector('.scroll-to-top');
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                scrollButton.classList.add('show');
+            } else {
+                scrollButton.classList.remove('show');
+            }
+            animateText();
+        };
+
+        // Function to scroll to the top
+        function scrollToTop() {
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        }
+
+        // Animate text on scroll
+        function animateText() {
+            const fadeElements = document.querySelectorAll('.fade-in');
+            fadeElements.forEach((element) => {
+                const position = element.getBoundingClientRect().top;
+                const screenPosition = window.innerHeight / 1.2;
+                if (position < screenPosition) {
+                    element.classList.add('show');
+                } else {
+                    element.classList.remove('show');
+                }
+            });
+        }
+    </script>
+</body>
+</html>
